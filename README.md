@@ -18,7 +18,7 @@ Every script is a **dry run by default** - it only prints what it found. Pass `-
 | `--exclude PATTERN` | keep matching items; repeatable or comma-separated |
 | `-h`, `--help` | show usage |
 
-A pattern containing glob characters (`*`, `?`, `[`) is matched against the whole string, anything else as a substring. For example `--exclude platform` keeps anything with `platform` in its path or command, `--exclude '*/coding-owl/website'` keeps only that exact directory.
+A pattern containing glob characters (`*`, `?`, `[`) is matched against the whole string, anything else as a substring. For example `--exclude my-app` keeps anything with `my-app` in its path or command, `--exclude '*/coding-owl/website'` keeps only that exact directory.
 
 Set `NO_COLOR=1` to disable colored output.
 
@@ -30,7 +30,7 @@ Editor language servers, MCP servers and app-bundled runtimes are listed separat
 
 ```sh
 ./dev-servers.sh                             # list
-./dev-servers.sh --prune --exclude platform  # stop everything except platform
+./dev-servers.sh --prune --exclude my-app    # stop everything except my-app
 ```
 
 | Flag | Description |
